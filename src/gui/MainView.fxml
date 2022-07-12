@@ -6,7 +6,7 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.VBox?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
    <content>
       <VBox prefHeight="374.0" prefWidth="590.0">
          <children>
@@ -14,27 +14,27 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Sabres">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Cadastrar" />
-                        <MenuItem mnemonicParsing="false" text="Atualizar" />
+                    <MenuItem fx:id="menuItemCadastrarSabres" mnemonicParsing="false" onAction="#onMenuItemCadastrarSabresAction" text="Cadastrar" />
+                        <MenuItem fx:id="menuItemAtualizarSabres" mnemonicParsing="false" onAction="#onMenuItemAtualizarSabresAction" text="Atualizar" />
                   </items>
                 </Menu>
                   <Menu mnemonicParsing="false" text="Manutenções">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="Cadastrar" />
-                        <MenuItem mnemonicParsing="false" text="Atualizar" />
+                        <MenuItem fx:id="menuItemCadastrarManutencoes" mnemonicParsing="false" onAction="#onMenuItemCadastrarManutencoesAction" text="Cadastrar" />
+                        <MenuItem fx:id="menuItemAtualizarManutencoes" mnemonicParsing="false" onAction="#onMenuItemAtualizarManutencoesAction" text="Atualizar" />
                      </items>
                   </Menu>
                 <Menu mnemonicParsing="false" text="Consultas">
                   <items>
-                        <MenuItem mnemonicParsing="false" text="Pesquisar Sabres" />
-                    <MenuItem mnemonicParsing="false" text="Listagem Sabres" />
-                        <MenuItem mnemonicParsing="false" text="Pesquisar Manutenções" />
-                        <MenuItem mnemonicParsing="false" text="Listagem Manutenções" />
+                        <MenuItem fx:id="menuItemPesquisarSabres" mnemonicParsing="false" onAction="#onMenuItemPesquisarSabresAction" text="Pesquisar Sabres" />
+                    <MenuItem fx:id="menuItemListarSabres" mnemonicParsing="false" onAction="#onMenuItemListarSabresAction" text="Listagem Sabres" />
+                        <MenuItem fx:id="menuItemPesquisarManutencoes" mnemonicParsing="false" onAction="#onMenuItemPesquisarManutencoesAction" text="Pesquisar Manutenções" />
+                        <MenuItem fx:id="menuItemListarManutencoes" mnemonicParsing="false" onAction="#onMenuItemListarManutencoesAction" text="Listagem Manutenções" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Ajuda">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Sobre" />
+                    <MenuItem fx:id="menuItemSobre" mnemonicParsing="false" onAction="#onMenuItemSobreAction" text="Sobre" />
                   </items>
                 </Menu>
               </menus>
