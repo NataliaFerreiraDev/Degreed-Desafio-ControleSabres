@@ -48,42 +48,42 @@ public class MainViewController implements Initializable {
 
 	@FXML
 	public void onMenuItemCadastrarSabresAction() {
-		System.out.println("Cadastro de Sabres");
+		loadView("/gui/CadastroSabres.fxml", x -> {});
 	}
 
 	@FXML
 	public void onMenuItemAtualizarSabresAction() {
-		System.out.println("Atualização de Sabres");
+		loadView("/gui/AtualizaSabres.fxml", x -> {});
 	}
 
 	@FXML
 	public void onMenuItemCadastrarManutencoesAction() {
-		System.out.println("Cadastro de Manutenções");
+		loadView("/gui/CadastroManutencao.fxml", x -> {});
 	}
 
 	@FXML
 	public void onMenuItemAtualizarManutencoesAction() {
-		System.out.println("Atualização de Manutenções");
+		loadView("/gui/AtualizaManutencao.fxml", x -> {});
 	}
 
 	@FXML
 	public void onMenuItemPesquisarSabresAction() {
-		System.out.println("Pesquisa de Sabres");
+		loadView("/gui/PesquisaSabres.fxml", x -> {});
 	}
 
 	@FXML
 	public void onMenuItemListarSabresAction() {
-		System.out.println("Listagem de Sabres");
+		loadView("/gui/ListaManutencoes.fxml", x -> {});
 	}
 
 	@FXML
 	public void onMenuItemPesquisarManutencoesAction() {
-		System.out.println("Pesquisa de Manutenções");
+		loadView("/gui/PesquisaManutencao.fxml", x -> {});
 	}
 
 	@FXML
 	public void onMenuItemListarManutencoesAction() {
-		System.out.println("Listagem de Manutenções");
+		loadView("/gui/ListaManutencoes.fxml", x -> {});
 	}
 
 	@FXML

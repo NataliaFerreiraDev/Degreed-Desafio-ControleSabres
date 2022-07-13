@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="237.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ListaSabresController">
+   <children>
+      <Label text="Listagem de Sabres">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Label>
+      <TableView fx:id="tableViewSabres" prefHeight="197.0" prefWidth="1054.0">
+        <columns>
+          <TableColumn fx:id="tableColumnId" prefWidth="23.20001220703125" text="ID" />
+          <TableColumn fx:id="tableColumnModelo" prefWidth="118.4000244140625" text="Modelo" />
+            <TableColumn fx:id="tableColumnDataFabricacao" prefWidth="97.5999755859375" text="Data Fabricação" />
+            <TableColumn fx:id="tableColumnSituacao" prefWidth="130.39996337890625" text="Situação" />
+            <TableColumn fx:id="tableColumnModeloBotao" prefWidth="96.79998779296875" text="Modelo Botão" />
+            <TableColumn fx:id="tableColumnSistema" prefWidth="52.800048828125" text="Sistema" />
+            <TableColumn fx:id="tableColumnGalaxia" prefWidth="49.5999755859375" text="Galáxia" />
+            <TableColumn fx:id="tableColumnModeloSensor" prefWidth="92.79998779296875" text="Modelo Sensor" />
+            <TableColumn fx:id="tableColumnValidadeSensor" prefWidth="115.19989013671875" text="Validade Sensor" />
+            <TableColumn fx:id="tableColumnJedi" prefWidth="136.0001220703125" text="Jedi" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
