@@ -84,11 +84,10 @@ public class MainViewController implements Initializable {
 
 	@FXML
 	public void onMenuItemListarManutencoesAction() {
-		loadView2("/gui/telas/ListaManutencoes.fxml");
-//		(ListaManutencaoController controller) -> {
-//			controller.setManutencaoService(new ManutencaoService());
-//			controller.updateTableViewManutencoes();
-//			);
+		loadView("/gui/telas/ListaManutencoes.fxml", (ListaManutencaoController controller) -> {
+			controller.setManutencaoService(new ManutencaoService());
+			controller.updateTableViewManutencoes();
+		});
 	}
 
 	@FXML
@@ -121,26 +120,4 @@ public class MainViewController implements Initializable {
 		}
 	}
 	
-	private synchronized void loadView2(String absoluteName) {
-		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
-			VBox newVBox = loader.load();
-			
-			Scene mainScene = Main.getMainScene();
-			VBox mainVbox = (VBox) ((ScrollPane) mainScene.getRoot()).getContent();
-			
-			Node mainMenu = mainVbox.getChildren().get(0);
-			mainVbox.getChildren().clear();
-			mainVbox.getChildren().add(mainMenu);
-			mainVbox.getChildren().addAll(newVBox.getChildren());
-			
-			ListaManutencaoController controller = loader.getController();
-			controller.setManutencaoService(new ManutencaoService());
-			controller.updateTableViewManutencoes();
-			
-		} catch(IOException ex) {
-			Alerts.showAlert("IO Exception", "Error loading view", ex.getMessage(), AlertType.ERROR);
-		}
-	}
-
 }
